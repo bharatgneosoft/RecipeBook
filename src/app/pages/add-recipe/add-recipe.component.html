@@ -1,1 +1,43 @@
-<p>add-recipe works!</p>
+<div class="row mt-5 mb-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                Add Recipe
+            </div>
+            <div class="card-body">
+                @if(errorMessage){
+                <div class="alert alert-danger">
+                    {{ errorMessage }}
+                </div>
+                }
+                <form [formGroup]="newRecipeForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Title</label>
+                        <input type="text" formControlName="title" class="form-control" id="name" name="title" >
+                    </div>
+                    <div class="form-group">
+                        <label for="Ingredients">Ingredients</label>
+                        <editor
+                        apiKey="1sox8z5psrz3jc6qv48cfz977wm6mytsfqj8xecms6tf4kwj"
+                        formControlName="ingredients" id="Ingredients" name="ingredients"
+                        [init]="{ height: 300, menubar: true, plugins: 'advlist autolink lists link image charmap print preview', toolbar: 
+                        'bold italic | alignleft aligncenter alignright | bullist numlist | link image' }"></editor>
+                    </div>
+                    <div class="form-group">
+                        <label for="Image">Image</label>
+                        <input type="file" (change)="onFileChange($event)" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="steps">Steps</label>
+                        <editor
+                        apiKey="1sox8z5psrz3jc6qv48cfz977wm6mytsfqj8xecms6tf4kwj"
+                        id="steps" formControlName="steps" name="steps"
+                        [init]="{ height: 300, menubar: true, plugins: 'advlist autolink lists link image charmap print preview', toolbar: 
+                        'bold italic | alignleft aligncenter alignright | bullist numlist | link image' }"></editor>
+                    </div>
+                    <button type="submit" class="btn btn-primary float-end" (click)="onSubmit()" [disabled]="newRecipeForm.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

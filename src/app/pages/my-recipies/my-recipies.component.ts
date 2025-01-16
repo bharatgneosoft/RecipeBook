@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { RecipiesService } from '../../services/recipies.service';
 import { Recipies } from '../../models/datamodels';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-my-recipies',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './my-recipies.component.html',
   styleUrl: './my-recipies.component.css'
 })
@@ -34,8 +35,4 @@ export class MyRecipiesComponent {
     
   }
 
-  createRecipe()
-  {
-    
-  }
 }

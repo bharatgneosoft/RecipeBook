@@ -26,4 +26,8 @@ export class RecipiesService {
   deleteRecipe(id:number):Observable<any>{
     return this.http.get(this.apiUrl+'delete_recipe/'+id);
   }
+
+  addRecipe(recipe:any):Observable<any>{
+    return this.http.post(this.apiUrl+'add_recipe',recipe);
+  }
 }

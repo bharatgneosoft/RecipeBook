@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RecipeDetailsComponent } from './pages/recipe-details/recipe-details.component';
 import { MyRecipiesComponent } from './pages/my-recipies/my-recipies.component';
+import { AddRecipeComponent } from './pages/add-recipe/add-recipe.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path:"my-recipies",
         component:MyRecipiesComponent
+    },
+    {
+        path:'create-recipe',
+        component: AddRecipeComponent
     }
 ];

@@ -11,7 +11,7 @@
     <!-- Post Image -->
     <div class="row my-4">
     <div class="col-12">
-        <img src="https://placehold.co/600x400" alt="Post Image" class="img-fluid rounded d-block">
+        <img src="http://localhost:8000/{{recipe?.image}}" alt="Post Image" class="img-fluid rounded d-block">
     </div>
     </div>
 
@@ -19,17 +19,14 @@
     <div class="row">
     <div class="col-12">
         <a class="blog-header-logo text-dark display-5 ">Ingredients</a>
-        <p class="lead">
-        {{recipe?.ingredients}}
+        <p class="lead" [innerHTML]="recipe?.ingredients">
         </p>
     </div>
     </div>
     <div class="row">
     <div class="col-12">
         <a class="blog-header-logo text-dark display-5 ">Steps to prepare</a>
-        <p class="lead">
-        {{recipe?.steps}}
-        </p>
+        <p class="lead" [innerHTML]="recipe?.steps"></p>
     </div>
     </div>
 
