@@ -1,0 +1,78 @@
+    <!-- Post Details Page -->
+<div class="container my-5">
+    <!-- Post Title -->
+    <div class="row">
+    <div class="col-12">
+        <a class="blog-header-logo text-dark display-5 ">{{recipe?.title | uppercase}}</a>
+        <p class="text-muted ">Posted by <strong>{{recipe?.user?.name}}</strong> on <em>{{recipe?.created_at | date:'fullDate'}}</em></p>
+    </div>
+    </div>
+
+    <!-- Post Image -->
+    <div class="row my-4">
+    <div class="col-12">
+        <img src="https://placehold.co/600x400" alt="Post Image" class="img-fluid rounded d-block">
+    </div>
+    </div>
+
+    <!-- Post Content -->
+    <div class="row">
+    <div class="col-12">
+        <a class="blog-header-logo text-dark display-5 ">Ingredients</a>
+        <p class="lead">
+        {{recipe?.ingredients}}
+        </p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-12">
+        <a class="blog-header-logo text-dark display-5 ">Steps to prepare</a>
+        <p class="lead">
+        {{recipe?.steps}}
+        </p>
+    </div>
+    </div>
+
+    <!-- Author Section -->
+    <div class="row my-5">
+    <div class="col-12">
+        <div class="d-flex align-items-center">
+        <img src="https://placehold.co/100x100" alt="Author Image" class="rounded-circle me-3">
+        <div>
+            <h5 class="mb-0">{{recipe?.user?.name}}</h5>
+            <p class="text-muted mb-0">Author Bio or Description</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="row my-5">
+    <div class="col-12">
+        <a>Comments</a>
+
+        <!-- Comment Form -->
+        <form class="mb-4">
+        <div class="mb-3">
+            <label for="comment" class="form-label">Leave a Comment</label>
+            <textarea class="form-control" id="comment" rows="4" placeholder="Write your comment here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Comments List -->
+        <div class="list-group">
+        <div class="list-group-item">
+            <h6 class="mb-1">John Doe</h6>
+            <p class="mb-0">This is a great post! Thanks for sharing.</p>
+            <small class="text-muted">Posted on January 14, 2025</small>
+        </div>
+        <div class="list-group-item">
+            <h6 class="mb-1">Jane Smith</h6>
+            <p class="mb-0">I found this really helpful. Keep up the good work!</p>
+            <small class="text-muted">Posted on January 13, 2025</small>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
