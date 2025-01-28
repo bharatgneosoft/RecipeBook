@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RecipeDetailsComponent } from './pages/recipe-details/recipe-details.component';
 import { MyRecipiesComponent } from './pages/my-recipies/my-recipies.component';
 import { AddRecipeComponent } from './pages/add-recipe/add-recipe.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
     {
@@ -30,7 +31,8 @@ export const routes: Routes = [
     },
     {
         path:"my-recipies",
-        component:MyRecipiesComponent
+        component:MyRecipiesComponent,
+        canActivate: [authGuard]
     },
     {
         path:'create-recipe',

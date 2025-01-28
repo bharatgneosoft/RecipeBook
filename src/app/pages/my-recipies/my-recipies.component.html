@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="mt-2">
+            <h1 class="mt-2" appHover>
                 My Recipes
                 <a class="btn btn-primary float-end" routerLink="/create-recipe">Create Recipe</a>
             </h1>
@@ -44,6 +44,19 @@
                     }
                 </tbody>
             </table>
+
+            <ngx-datatable
+                class="bootstrap"
+                [rows]="rows"
+                [columns]="columns"
+                [headerHeight]="40"
+                [summaryRow]="true"
+                [summaryPosition]="'bottom'"
+                [footerHeight]="40"
+                [limit]="10"
+                rowHeight="auto"
+            >
+            </ngx-datatable>
         </div>
     </div>
 </div>
